@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parent Gallery</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📂 Gallery - Child Device</h1>
+    {% for folder, images in folders.items() %}
+    <div class="folder">
+        <h2>{{ folder }}</h2>
+        <div class="images">
+            {% for img in images %}
+            <img src="/uploads/{{ folder }}/{{ img }}" alt="{{ img }}" />
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>
