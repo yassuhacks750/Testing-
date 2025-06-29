@@ -8,6 +8,11 @@
     <h1>📂 Gallery - Child Device</h1>
     {% for folder, images in folders.items() %}
     <div class="folder">
+        <form action="/delete_all" method="POST" onsubmit="return confirm('सभी फ़ोटो हट जाएंगी। जारी रखें?')">
+    <button type="submit" style="background-color: red; color: white; padding: 10px 15px; border: none; border-radius: 5px;">
+        🗑️ Delete All Photos
+    </button>
+        </form>
         <h2>{{ folder }}</h2>
         <div class="images">
             {% for img in images %}
